@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Calculodosalário</string>
+    <string name="Text_principal">Calculo do salário</string>
+    <string name="Text_salario">Digite seu salário (R$)</string>
+    <string name="Text_Percentual">Qual será o percentual ?</string>
+    <string name="Button_Novo_saldo">Mostrar novo saldo</string>
+
+
+</resources>
