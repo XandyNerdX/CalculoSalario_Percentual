@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox checkBox_40, checkBox_45, checkBox_50;
     private EditText Salario;
     private TextView Resultado;
+    private double result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         checkBox_45 = findViewById(R.id.Percentual_45);
         checkBox_50 = findViewById(R.id.Percentual_50);
         Resultado = findViewById(R.id.Resultado); // Adicione esta linha
+
 
         checkBox_40.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,10 +80,12 @@ public class MainActivity extends AppCompatActivity {
             saldo = salario * 0.5;
         }
 
+        double result = salario + saldo;
+
         // Exibir o saldo calculado
         Resultado.setTextColor(getResources().getColor(R.color.black));
         Resultado.setVisibility(View.VISIBLE); // Tornar o TextView visível
-        Resultado.setText("R$ " + saldo); // Corrija aqui para exibir o saldo calculado
-        Toast.makeText(this, "Saldo calculado: " + saldo, Toast.LENGTH_SHORT).show();
+        Resultado.setText("Salario reajustado \nR$" + result); // Corrija aqui para exibir o saldo calculado
+        Toast.makeText(this, "Reajuste de: R$" + saldo, Toast.LENGTH_SHORT).show();
     }
 }
